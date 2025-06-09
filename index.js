@@ -69,7 +69,7 @@ app.get('/post/:id', (req, res) => {
     res.render('view-post', { post: results[0] });
   });
 
-  // Dis one to view a single post based on the id stored locally using array
+  // While this one is to view a single post based on the id stored locally using array
 //   const post = posts.find(p => p.id === parseInt(req.params.id));
 //   if (!post) return res.status(404).send('Post not found');
 //   res.render('view-post', { post });

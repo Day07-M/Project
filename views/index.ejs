@@ -1,0 +1,50 @@
+
+
+    <%- include('partials/header') %>
+
+
+
+<h1 class="page-title">Leave a legacy!</h1>
+
+   
+<div class="container">
+    <div class="post-box" onclick="location.href='/post';">
+      + Add New Blog
+    </div>
+
+    <h2>All Posts</h2>
+<div class="post-list">
+  <% if (posts.length === 0) { %>
+    <p>No posts yet.</p>
+  <% } else { %>
+  <div class="post-grid">
+  <% posts.forEach(function(post) { %>
+    <div class="post-card">
+      <strong><%= post.title %></strong>
+      <!-- <p><%= post.content %></p> -->
+      <a href="/post/<%= post.id %>">View</a>
+    </div>
+  <% }) %>
+</div>
+  <% } %>
+</div>
+
+
+    <!-- <div>
+  <div id="main">
+    <h1>Band Name Generator</h1>
+    <form action="/submit" method="POST">
+      <label for="street">Title</label>
+      <input type="text" name="street" required>
+      <label for="pet">Description</label>
+      <input type="text" name="pet" required>
+      <input type="submit" value="Post">
+    </form> 
+  </div>
+</div>
+  -->
+
+
+
+   <%- include('partials/footer') %>
+

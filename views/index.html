@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Blog Project/Blog-1.0/public/styles/tes.css">
+</head>
+<body>
+    <div class="container">
+    <div id="posts">
+        <!-- <div class="content">
+        <input type="text" value="Title">
+        <textarea name="Description" id="text-description">Write your blog</textarea>
+        <button type="submit">Post</button>
+        </div>
+
+        <div class="content">
+        <input type="text" value="Title">
+        <textarea name="Description" id="text-description">Write your blog</textarea>
+        <button type="submit">Post</button>
+
+        <div class="content">
+        <input type="text" value="Title">
+        <textarea name="Description" id="text-description">Write your blog</textarea>
+        <button type="submit">Post</button>
+        </div>
+
+        <div class="content">
+        <input type="text" value="Title">
+        <textarea name="Description" id="text-description">Write your blog</textarea>
+        <button type="submit">Post</button>
+        </div>
+        
+        <div class="content">
+        <input type="text" value="Title">
+        <textarea name="Description" id="text-description">Write your blog</textarea>
+        <button type="submit">Post</button>
+        </div> -->
+ <main>
+    <!-- + Button to open modal -->
+    <div class="add-post-wrapper">
+      <button id="openModalBtn" class="add-post-button">+</button>
+    </div>
+
+    <!-- Posts Section -->
+    <section class="posts">
+      <h2>Recent Posts</h2>
+      <div id="postContainer">
+        <% posts.forEach((post, index) => { %>
+          <div class="post" data-index="<%= index %>">
+            <h3 class="post-title"><%= post.title %></h3>
+            <p class="post-content"><%= post.content %></p>
+            <div class="actions">
+              <form action="/posts/<%= index %>?_method=DELETE" method="POST">
+                <button type="submit">Delete</button>
+              </form>
+              <button class="edit" onclick="openEditModal(<%= index %>)">Edit</button>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </section>
+  </main>
+
+  <!-- Create Post Modal -->
+  <div id="modalCreate" class="modal hidden">
+    <div class="modal-content">
+      <h2>New Post</h2>
+      <form action="/posts" method="POST">
+        <input type="text" name="title" placeholder="Post Title" required />
+        <textarea name="content" rows="5" placeholder="Write your content here..." required></textarea>
+        <div class="modal-actions">
+          <button type="button" onclick="closeCreateModal()">Cancel</button>
+          <button type="submit">Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+    </div>
+    </div>
+</body>
+</html>
+

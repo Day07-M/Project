@@ -1,0 +1,21 @@
+<%- include('partials/header') %>
+
+
+<body>
+  <div class="container">
+    <h2><%= post.title %></h2>
+    <p><%= post.content %></p>
+
+    <div class="buttons">
+      <a href="/edit/<%= post.id %>" class="btn">Edit</a>
+
+      <form action="/delete/<%= post.id %>" method="POST" class="inline-form">
+        <button type="submit" class="btn delete-btn" onclick="return confirm('Are you sure?')">Delete</button>
+      </form>
+
+      <a href="/" class="btn">Back</a>
+    </div>
+  </div>
+</body>
+
+  <%- include('partials/footer') %>

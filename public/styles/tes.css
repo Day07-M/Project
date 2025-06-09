@@ -1,0 +1,25 @@
+#main-container{
+    display: grid;  
+    column-gap: 30px;
+    row-gap: 30px;
+    grid-auto-columns: auto;
+    
+}
+
+#posts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  
+
+}
+
+
+.content{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+
