@@ -10,7 +10,7 @@
 body {
   font-family: Arial, sans-serif;
   /* background-color: #ffffff; */
-  
+  cursor: url('/images/cursor2.png') 4 4, auto;
   background-image: url('/images/night01.jpg');
   background-size: 100% 100%;
   background-position: center;
